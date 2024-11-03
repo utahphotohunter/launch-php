@@ -1,0 +1,753 @@
+/* css sheet for launch services llc website */
+
+/* color theme: #062655, #b19c81, #4079cb */
+
+/* variables */
+
+:root {
+    --primary-color: #062655;
+    --secondary-color: #b19c81;
+    --secondary-color-clear: #b19c8190;
+    --accent-color: #4079cb;
+    --accent-color-2: #264778;
+}
+
+/* global */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+html,
+body {
+    line-height: 1.7em;
+    position: relative;
+    overflow-x: hidden;
+}
+
+p {
+    margin: 10px, 0;
+}
+
+/* utilities */
+
+.primary-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 1px 2px white;
+    color: var(--primary-color);
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+.showcase {
+    display: flex;
+    text-align: center;
+    height: 400px;
+}
+
+.showcase-content {
+    margin: auto;
+    background-color: var(--secondary-color-clear);
+    line-height: 3rem;
+    padding: 50px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;
+    padding: 0, 20px;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    background-color: var(--accent-color);
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dark-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* clear floats */
+
+.clr {
+    clear: both;
+}
+
+
+/* navbar */
+
+#navbar {
+    background-color: var(--accent-color-2);
+    height: 120px;
+}
+
+.logo-link {
+    height: 60%;
+    padding: 0 0 0 20px !important;
+}
+
+.logo {
+    height: 100%;
+}
+
+/* main menu */
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.main-menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar ul li {
+    padding: 0;
+    background-color: #4079cb;
+}
+
+#navbar a {
+    background-color: var(--accent-color-2);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+}
+
+#navbar a:hover {
+    background-color: var(--accent-color);
+}
+
+a.current {
+    background-color: var(--accent-color) !important;
+}
+
+.logo-link:hover {
+    background-color: var(--accent-color-2) !important;
+}
+
+/* mobile menu */
+
+.mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 40px;
+}
+
+.mobile-menu-list-items {
+    position: absolute;
+    top: 120px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-color-2);
+    z-index: 1;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.mobile-menu-list-items.active {
+    transform: translateX(0);
+}
+
+.mobile-menu-toggle {
+    color: var(--accent-color);
+    padding: 20px;
+    cursor: pointer;
+}
+
+/* footer */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    background-color: var(--accent-color-2);
+    color: white;
+    padding: 20px;
+}
+
+#footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+#footer a:hover {
+    color: var(--accent-color);
+}
+
+
+/* home page */
+
+/* showcase */
+
+#showcase {
+    position: relative;
+    background: url('../img/webp/friends_blue_bright.webp') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#showcase .home-showcase-content {
+    text-align: center;
+    background-color: var(--secondary-color-clear);
+    max-width: fit-content;
+}
+
+#showcase .home-showcase-content h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.2em;
+    text-shadow: #ffffff90 2px 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#showcase a {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    font-size: xx-large;
+}
+
+/* mission */
+
+#mission {
+    height: fit-content;
+    overflow: hidden;
+    background-color: var(--accent-color-2);
+    color: white;
+    display: flex;
+}
+
+#mission-statement {
+    max-width: 50%;
+    text-align: center;
+    line-height: 1.9em;
+    padding: 5px;
+    margin: 25px;
+}
+
+#mission-statement h2 {
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+#mission-statement p {
+    font-size: 21px;
+}
+
+#management {
+    max-width: 50%;
+    overflow: hidden;
+    text-align: center;
+    align-content: center;
+}
+
+#management img {
+    width: 70%;
+    border-radius: 50%;
+    padding: 25px;
+}
+
+/* join our family */
+
+#join-our-family {
+    text-align: center;
+    padding-top: 50px;
+    line-height: 1.7em;
+    /* background-color: var(--secondary-color); */
+    background: url("../img/webp/downsyndrome-home_tan_dark.webp") no-repeat top center/cover;
+    color: var(--primary-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+#join-our-family-content {
+    background-color: #ffffff50;
+    width: fit-content;
+    margin: 50px;
+}
+
+#join-our-family h1,
+#join-our-family h2 {
+    text-shadow: #ffffff90 1px 2px;
+}
+
+#join-our-family h1 {
+    padding-right: 50px;
+    padding: 50px;
+}
+
+#join-our-family h2 {
+    padding-left: 50px;
+    padding-bottom: 70px;
+}
+
+#join-our-family a {
+    font-size: x-large;
+    margin-bottom: 50px;
+}
+
+
+/* staff page*/
+
+/* staff bios */
+
+#staff-page {
+    background-color: var(--secondary-color-clear);
+}
+
+#staff-showcase {
+    background: url("../img/webp/friends-meet-blue.webp") center center/cover no-repeat;
+}
+
+#staff-page h2 {
+    padding: 20px;
+    padding-left: 100px;
+    color: var(--primary-color);
+    text-shadow: white 1px 2px;
+    font-size: 40px;
+}
+
+.staff {
+    display: flex;
+    min-height: 300px;
+    background-color: var(--accent-color-2);
+    border-top: dotted var(--secondary-color) 2px;
+    padding-bottom: 50px;
+}
+
+.staff-img img {
+    border-radius: 100%;
+    height: 200px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.staff-bio {
+    padding-top: 40px;
+    color: white;
+    max-width: 80%;
+    float: right;
+}
+
+.staff-bio h3 {
+    font-size: 1.9rem;
+}
+
+.staff-bio p {
+    font-size: large;
+}
+
+/* staff contact us */
+
+#staff-contact-us {
+    display: flex;
+    height: 400px;
+    margin: auto;
+    line-height: 2.3rem;
+    background: url("../img/webp/letters-blue.webp") center center/cover no-repeat;
+}
+
+.staff-contact-us-content {
+    margin: auto;
+    text-align: center;
+    background-color: var(--secondary-color-clear);
+    padding: 50px;
+    width: 40%;
+}
+
+.staff-contact-us-content h2 {
+    padding: 0 !important
+}
+
+.staff-contact-us-content h3 {
+    padding-bottom: 30px;
+    padding-top: 15px;
+    color: var(--accent-color-2);
+    font-size: 2rem;
+    text-shadow: white 1px 1px;
+}
+
+
+/* services page */
+
+/* services heading */
+
+#services-page {
+    background-color: var(--accent-color-2);
+}
+
+#services-showcase {
+    background: url("../img/webp/services-background-blue.webp") bottom center/cover no-repeat;
+}
+
+/* services content */
+
+.services-content {
+    display: flex;
+    height: fit-content;
+    border: var(--secondary-color) dotted 1px;
+}
+
+.service-img {
+    max-width: 30%;
+    background-color: var(--primary-color);
+    align-content: center;
+}
+
+.service-img img {
+    width: 100%;
+    padding: 30px;
+}
+
+.service-text {
+    max-width: 70%;
+    padding: 20px;
+}
+
+.service-text h2,
+.service-text p {
+    color: white;
+    text-align: center;
+}
+
+.flip {
+    flex-direction: row-reverse;
+}
+
+/* services contact us */
+
+#services-contact-us {
+    display: flex;
+    text-align: center;
+    background: url("../img/webp/computer-station-blue.webp") center center/cover no-repeat;
+    height: 400px;
+}
+
+#services-contact-us-content {
+    background-color: var(--secondary-color-clear);
+    width: 50%;
+}
+
+#services-contact-us-content h1 {
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+
+#services-contact-us-content a {
+    font-size: xx-large;
+    margin-bottom: 50px;
+    padding: 1.5rem;
+}
+
+
+/* about page */
+
+#about-page-body {
+    background-color: var(--accent-color-2);
+}
+
+/* about header */
+
+#about-showcase {
+    background: url("../img/webp/about-header-blue-crop.webp") top center/cover no-repeat;
+}
+
+
+/* about mission */
+
+#about-mission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    background: url("../img/webp/about-mission-crop-smudge.webp") top center/cover no-repeat;
+    height: 600px;
+}
+
+#about-mission h2 {
+    padding: 10px;
+}
+
+#about-mission article {
+    width: 90%;
+    background-color: var(--secondary-color-clear);
+    color: white;
+    text-shadow: var(--primary-color) 1px 2px;
+    text-align: center;
+    font-size: x-large;
+    padding: 25px;
+}
+
+/* about haskell quote */
+
+#about-haskell-quote {
+    background: url("../img/webp/about-haskell-background.webp") center center/cover no-repeat;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#about-haskell-quote img {
+    height: 500px;
+    display: block;
+    margin: auto;
+}
+
+/* about history */
+
+#about-history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: url("../img/webp/about-history-blue-dark.webp");
+    padding: 25px;
+}
+
+#about-history-content {
+    padding: 25px;
+    background-color: var(--secondary-color-clear);
+    color: white;
+    text-shadow: var(--primary-color) 1px 2px;
+    text-align: center;
+    font-size: x-large;
+    line-height: 2rem;
+}
+
+/* about staff */
+
+#about-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/webp/about-meet-staff-blue-bright.webp") center center/cover no-repeat;
+    height: 400px;
+}
+
+#about-team-content {
+    background-color: var(--secondary-color-clear);
+    width: 60%;
+    padding: 25px;
+    text-align: center;
+    line-height: 3.2rem;
+}
+
+#about-team-content a {
+    font-size: x-large;
+    margin-top: 25px;
+}
+
+
+/* contact page */
+
+#contact-body {
+    background-color: var(--accent-color-2);
+}
+
+/* contact header */
+
+#contact-showcase {
+    background: url("../img/webp/contact-header-blue.webp") center center/cover no-repeat;
+}
+
+/* contact form */
+
+#contact-form-preface {
+    text-align: center;
+    color: white;
+    background-color: var(--accent-color-2);
+    width: 100%;
+    font-size: x-large;
+    padding: 50px;
+    line-height: 3rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--accent-color);
+    width: 75%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    height: fit-content;
+}
+
+.contact-form-divs {
+    height: fit-content;
+    padding: 40px;
+    background-color: var(--primary-color);
+    margin: 25px;
+    border: var(--secondary-color) solid 3px;
+}
+
+.contact-form label {
+    font-size: x-large;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: var(--secondary-color) 2px solid;
+    height: 2rem;
+    width: 50%;
+    padding: 10px;
+}
+
+#contact-name-inputs label,
+#contact-name-inputs input {
+    margin-bottom: 20px;
+}
+
+#contact-message-inputs {
+    margin-bottom: 0;
+}
+
+#contact-message-inputs textarea {
+    height: 100px;
+    width: 75%;
+    margin-top: 25px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+#contact-form button {
+    margin: 15px;
+}
+
+/* careers page */
+
+#careers-body {
+    background-color: var(--accent-color-2);
+}
+
+/* careers header */
+
+#careers-showcase {
+    background: url("../img/webp/contact-header-blue.webp") center center/cover no-repeat;
+}
+
+/* careers form */
+
+#careers-form-preface {
+    text-align: center;
+    color: white;
+    background-color: var(--accent-color-2);
+    width: 100%;
+    font-size: x-large;
+    padding: 50px;
+    line-height: 3rem;
+}
+
+.careers-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--accent-color);
+    width: 75%;
+    margin: auto;
+    color: white;
+    text-align: center;
+    height: fit-content;
+}
+
+.careers-form-divs {
+    height: fit-content;
+    padding: 40px;
+    background-color: var(--primary-color);
+    margin: 25px;
+    border: var(--secondary-color) solid 3px;
+}
+
+.careers-form label {
+    font-size: x-large;
+}
+
+.careers-form input,
+.careers-form textarea {
+    border: var(--secondary-color) 2px solid;
+    height: 2rem;
+    width: 50%;
+    padding: 10px;
+}
+
+#careers-name-inputs label,
+#careers-name-inputs input {
+    margin-bottom: 20px;
+}
+
+#careers-file-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#careers-file-inputs input {
+    border: none;
+}
+
+.careers-form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.careers-form button {
+    margin: 15px;
+}
